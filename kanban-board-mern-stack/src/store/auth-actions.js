@@ -37,6 +37,7 @@ export const getAuthToken = (payload, callback) => {
 export const signUp = (payload, callback) => {
   return async (dispatch) => {
     const signUpHandler = async () => {
+      console.log(Routes.AUTH + "signup");
       const response = await axios.post(Routes.AUTH + "signup", payload);
       return response;
     };
